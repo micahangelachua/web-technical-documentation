@@ -1,10 +1,15 @@
 body {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+body p, ul {
+   font-size: 14pt;
+}
 #nav-header {
    font-size: 20pt;
    font-weight: 600;
+   text-align: center;
+   color: aliceblue;
+   text-shadow: 0 3px 10px rgb(130, 128, 128);
 }
 
 header {
@@ -18,6 +23,7 @@ subheader {
 }
 
 code {
+   font-size: 14pt;
    display: block;
    border-radius: 8px;
    background: lightgrey;
@@ -35,6 +41,7 @@ code {
    height: 100%;
    border-right: solid;
    border-color: rgba(0, 22, 22, 0.4);
+   background-image: linear-gradient(0deg,  rgb(30, 72, 163), rgb(0, 139, 139), rgb(7, 179, 179));
 }
 
 #navbar ul {
@@ -42,15 +49,18 @@ code {
    padding: 0;
    overflow-y: auto;
    overflow-x: hidden;
-   }
+}
 
 #navbar li {
-   border-top: 2px solid grey;
    position: relative;
    width: 100%;
 }
 
 #navbar a {
+   font-size: larger;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-weight: 700;
+   color: black;
    display: block;
    padding: 10px 30px;
 }
@@ -62,3 +72,28 @@ code {
    margin-bottom: 110px;
 }
 
+@media only screen and (max-width: 815px) {
+   /* For mobile phones: */
+      #navbar ul {
+         border: 1px solid;
+         height: 207px;
+      }
+   
+      #navbar {
+         position: absolute;
+         top: 0;
+         padding: 0;
+         margin: 0;
+         width: 100%;
+         max-height: 260px;
+         border: none;
+         z-index: 1;
+         border-bottom: 2px solid;
+      }
+   
+      #main-doc {
+         position: relative;
+         margin-left: 0px;
+         margin-top: 260px;
+      }
+   }
